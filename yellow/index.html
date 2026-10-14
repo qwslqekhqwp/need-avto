@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Need-Авто — автосервис и шиномонтаж в Иваново</title>
+<meta name="description" content="Need-Авто — автосервис и шиномонтаж в Иваново на 16-й линии. Ремонт ходовой, двигателя и тормозов, ТО, развал-схождение, отопители, фаркопы. Запись: +7 (999) 960-19-17.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Need-Авто — автосервис и шиномонтаж в Иваново">
+<meta property="og:description" content="Ремонт любой сложности и шиномонтаж. ★ 4.6 на Яндекс Картах.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="../assets/icon-yellow.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800&family=Russo+One&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Need-Авто",
+  "telephone": "+79999601917",
+  "address": {"@type": "PostalAddress", "addressLocality": "Иваново", "streetAddress": "16-я линия", "addressCountry": "RU"},
+  "geo": {"@type": "GeoCoordinates", "latitude": 56.993435, "longitude": 40.931718},
+  "openingHours": "Mo-Su 09:00-19:00",
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "65", "reviewCount": "37"},
+  "sameAs": ["https://yandex.ru/maps/org/need_avto/78441120028/"]
+}
+</script>
+<style>
+:root{
+  --bg:#111111; --bg-2:#1A1A1A; --bg-3:#242424; --line:#2E2E2E;
+  --yellow:#FFC400; --yellow-2:#FFD640; --ink:#111111;
+  --text:#F2F2F2; --muted:#9A9A9A;
+  --head:'Russo One', 'Montserrat', sans-serif;
+  --body:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --wrap:1200px; --gutter:clamp(16px, 4vw, 40px);
+  --cut:14px;
+  --hazard:repeating-linear-gradient(-45deg, var(--yellow) 0 18px, var(--ink) 18px 36px);
+  --tool-a:var(--yellow); --tool-b:var(--yellow); --logo-bg:var(--bg);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--text);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.ico{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hazard{height:10px;background:var(--hazard)}
+.cut{clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+
+/* ——— Buttons ——— */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;font-family:var(--head);font-size:15px;letter-spacing:.04em;text-transform:uppercase;border:0;cursor:pointer;transition:background .2s,color .2s,transform .2s;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.btn:active{transform:translateY(1px)}
+.btn-y{background:var(--yellow);color:var(--ink)}
+.btn-y:hover{background:var(--yellow-2)}
+.btn-line{background:var(--bg-3);color:var(--text)}
+.btn-line:hover{background:#333}
+.btn-ink{background:var(--ink);color:var(--yellow)}
+.btn-ink:hover{background:#000}
+.btn .ico{width:20px;height:20px}
+
+/* ——— Header ——— */
+.header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header .hazard{height:6px}
+.header .wrap{display:flex;align-items:center;gap:32px;height:72px}
+.logo{width:170px;height:auto;flex-shrink:0;color:#fff}
+.logo text{font-family:'Montserrat','Arial Black',sans-serif;font-weight:800;font-size:80px;fill:currentColor}
+.nav{display:flex;gap:28px;margin-left:auto;font-size:14px;font-weight:500}
+.nav a{color:#cfcfcf;transition:color .2s}
+.nav a:hover{color:var(--yellow)}
+.header-phone{font-family:var(--head);white-space:nowrap;font-size:16px;color:var(--yellow)}
+.header .btn{padding:12px 20px;font-size:13px}
+.burger{display:none;width:44px;height:44px;background:var(--yellow);border:0;cursor:pointer;margin-left:auto;position:relative;color:var(--ink)}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:currentColor;transition:transform .25s,opacity .25s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ——— Hero ——— */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,7vw,96px) 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,
+  linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px;opacity:.35;mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;background:var(--bg-3);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+.tag i{width:8px;height:8px;background:var(--yellow);border-radius:50%;box-shadow:0 0 0 4px rgba(255,196,0,.2)}
+.hero h1{font-family:var(--head);font-weight:400;font-size:clamp(34px,5.4vw,70px);line-height:1.02;text-transform:uppercase;margin:22px 0 22px;overflow-wrap:anywhere}
+.hero h1 mark{background:var(--yellow);color:var(--ink);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);color:#c9c9c9;max-width:520px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-panel{position:relative;align-self:stretch;min-height:440px;background:var(--yellow);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);display:flex;align-items:center;justify-content:center;margin-top:calc(-1 * clamp(48px,7vw,96px));margin-right:calc(-1 * (max(0px, (100vw - var(--wrap)) / 2) + var(--gutter)))}
+.hero-panel .tire{width:min(78%,380px);height:auto;margin-left:14%;animation:spin 40s linear infinite}
+.sticker{position:absolute;right:var(--gutter);top:28px;background:var(--ink);color:var(--text);padding:16px 20px;text-align:right}
+.sticker b{display:block;font-family:var(--head);font-size:40px;line-height:1;color:var(--yellow)}
+.sticker span{font-size:12px;color:var(--muted)}
+.hero-chip{position:absolute;left:24%;bottom:28px;background:var(--ink);color:var(--yellow);font-family:var(--head);font-size:14px;padding:10px 14px;letter-spacing:.06em;text-transform:uppercase}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Marquee */
+.marquee{background:var(--yellow);color:var(--ink);overflow:hidden;border-top:3px solid var(--ink)}
+.marquee-track{display:flex;width:max-content;animation:marq 38s linear infinite}
+.marquee-track span{font-family:var(--head);font-size:20px;text-transform:uppercase;padding:16px 0;white-space:nowrap}
+.marquee-track span::after{content:"✕";margin:0 26px;font-size:14px;vertical-align:middle}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ——— Sections ——— */
+section{padding:clamp(64px,9vw,112px) 0}
+.kicker{font-family:var(--head);font-size:14px;color:var(--yellow);letter-spacing:.12em;text-transform:uppercase}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:48px}
+.sec-head h2,.h2{font-family:var(--head);font-weight:400;font-size:clamp(30px,4.4vw,52px);line-height:1.05;text-transform:uppercase;margin-top:10px}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* Advantages */
+.adv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.adv-item{background:var(--bg-2);padding:30px 26px;border-bottom:3px solid var(--yellow)}
+.adv-ico{width:56px;height:56px;background:var(--yellow);color:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.adv-item h3{font-family:var(--head);font-weight:400;font-size:19px;line-height:1.2;margin-bottom:10px;text-transform:uppercase}
+.adv-item p{color:var(--muted);font-size:15px}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{position:relative;background:var(--bg-2);border:1px solid var(--line);padding:30px 28px 26px;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;align-items:start;text-align:left;cursor:pointer;transition:background .25s,color .25s,border-color .25s;overflow:hidden}
+.svc .n{grid-row:span 3;min-width:64px;font-family:var(--head);font-size:44px;line-height:.9;color:transparent;-webkit-text-stroke:1.5px var(--yellow);transition:color .25s,-webkit-text-stroke-color .25s}
+.svc h3{font-family:var(--head);font-weight:400;font-size:18px;line-height:1.2;text-transform:uppercase;margin-top:2px;padding-right:30px}
+.svc p{font-size:14px;color:var(--muted);transition:color .25s}
+.svc .more{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--yellow);margin-top:8px;transition:color .25s}
+.svc .ico{position:absolute;right:18px;top:18px;width:30px;height:30px;color:#444;transition:color .25s}
+.svc:hover,.svc:focus-visible{background:var(--yellow);color:var(--ink);border-color:var(--yellow);outline:none}
+.svc:hover .n,.svc:focus-visible .n{color:var(--ink);-webkit-text-stroke-color:var(--ink)}
+.svc:hover p,.svc:hover .more,.svc:hover .ico,.svc:focus-visible p,.svc:focus-visible .more,.svc:focus-visible .ico{color:var(--ink)}
+
+/* Tires */
+.tires{background:var(--yellow);color:var(--ink);position:relative;padding-bottom:clamp(64px,9vw,112px)}
+.tires .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.tires .kicker{color:var(--ink);opacity:.7}
+.tires .lead{margin:20px 0 32px;font-size:17px;max-width:460px}
+.tire-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tire-card{background:var(--ink);color:var(--text);padding:24px 22px}
+.tire-card .ico{color:var(--yellow);width:34px;height:34px;margin-bottom:16px}
+.tire-card b{display:block;font-family:var(--head);font-weight:400;font-size:17px;text-transform:uppercase;line-height:1.2;margin-bottom:6px}
+.tire-card span{font-size:14px;color:var(--muted)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.step{background:var(--bg-2);padding:28px 24px;position:relative}
+.step::before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--yellow);color:var(--ink);font-family:var(--head);font-size:22px;margin-bottom:20px;clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+.step::after{content:"";position:absolute;top:52px;left:84px;right:24px;height:2px;background:repeating-linear-gradient(90deg,var(--yellow) 0 6px,transparent 6px 12px);opacity:.5}
+.step h3{font-family:var(--head);font-weight:400;font-size:19px;text-transform:uppercase;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
+
+/* Reviews */
+.reviews-wrap{display:grid;grid-template-columns:.8fr 2.2fr;gap:24px}
+.score{background:var(--yellow);color:var(--ink);padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.score b{font-family:var(--head);font-size:88px;line-height:.9}
+.score .stars{font-size:22px;letter-spacing:4px}
+.score p{font-size:15px;font-weight:500}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review{background:var(--bg-2);padding:28px 24px;display:flex;flex-direction:column;gap:18px;position:relative}
+.review::before{content:"“";font-family:Georgia,serif;font-size:72px;line-height:.6;color:var(--yellow);height:28px}
+.review q{quotes:none;font-size:17px;line-height:1.5;flex:1}
+.review cite{font-style:normal;font-size:13px;color:var(--muted)}
+.review .stars{color:var(--yellow);letter-spacing:3px;font-size:14px}
+
+/* Booking */
+.booking .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.booking .lead{color:#c9c9c9;margin:20px 0 28px;font-size:17px;max-width:440px}
+.contacts-quick{display:grid;gap:10px;max-width:420px}
+.contacts-quick a{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--bg-2);border-left:3px solid var(--yellow);font-weight:600;transition:background .2s}
+.contacts-quick a:hover{background:var(--bg-3)}
+.contacts-quick .ico{color:var(--yellow);width:22px;height:22px}
+.contacts-quick small{margin-left:auto;font-weight:400;color:var(--muted);font-size:13px}
+.form-frame{padding:10px;background:var(--hazard)}
+.form{background:var(--bg);padding:clamp(24px,4vw,40px);display:grid;gap:16px}
+.form h3{font-family:var(--head);font-weight:400;font-size:24px;text-transform:uppercase}
+.field{display:grid;gap:6px}
+.field label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-bottom:2px solid #444;padding:14px 16px;font-size:16px;border-radius:0;transition:border-color .2s;appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--yellow) 50%),linear-gradient(135deg,var(--yellow) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:44px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--yellow)}
+.field.err input{border-color:#ff5a3c}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form .btn{width:100%;margin-top:6px}
+.form small{font-size:12px;color:var(--muted)}
+
+/* Contacts */
+.contacts{padding-top:0}
+.contacts .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:16px}
+.info{background:var(--bg-2);padding:clamp(24px,4vw,40px);display:grid;gap:26px;align-content:start}
+.info-row{display:flex;gap:16px}
+.info-row .ico{color:var(--yellow);flex-shrink:0}
+.info-row small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.info-row b{font-size:18px;font-weight:600}
+.info-row a:hover{color:var(--yellow)}
+.map{position:relative;min-height:440px;background:var(--bg-2);outline:3px solid var(--yellow);outline-offset:-3px}
+.map iframe{position:absolute;inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);border:0}
+
+/* Footer */
+.footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding-top:40px;padding-bottom:40px}
+.footer .logo{width:150px}
+.footer a:hover{color:var(--yellow)}
+
+.fab{position:fixed;right:16px;bottom:16px;z-index:40;width:58px;height:58px;background:var(--yellow);color:var(--ink);display:none;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(255,196,0,.35);clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.fab .ico{width:26px;height:26px}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ——— Responsive ——— */
+@media (max-width:1080px){
+  .nav{gap:20px}
+  .header-phone{display:none}
+  .adv{grid-template-columns:1fr 1fr}
+  .reviews-wrap{grid-template-columns:1fr}
+  .score{flex-direction:row;align-items:center;flex-wrap:wrap}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .nav{position:fixed;inset:78px 0 0 0;background:var(--bg);flex-direction:column;gap:0;padding:16px var(--gutter);margin:0;transform:translateX(100%);transition:transform .3s;font-size:20px;font-family:var(--head);text-transform:uppercase}
+  .nav a{padding:18px 0;border-bottom:1px solid var(--line);color:var(--text)}
+  .menu-open .nav{transform:none}
+  .menu-open{overflow:hidden}
+  .header .btn{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-panel{min-height:360px;margin:0 calc(-1 * var(--gutter));clip-path:polygon(0 12%,100% 0,100% 100%,0 100%)}
+  .hero-panel .tire{margin:20px 0 0;width:min(70%,300px)}
+  .hero-panel{margin-top:0}
+  .hero-chip{display:none}
+  .sticker{top:auto;bottom:20px;padding:12px 16px}
+  .sticker b{font-size:30px}
+  .services{grid-template-columns:1fr 1fr}
+  .tires .wrap,.booking .wrap,.contacts .wrap{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+  .reviews{grid-template-columns:1fr}
+  .fab{display:flex}
+}
+@media (max-width:560px){
+  .logo{width:140px}
+  .hero-cta .btn{flex:1 1 100%}
+  .adv,.services,.tire-grid,.steps,.row2{grid-template-columns:1fr}
+  .score b{font-size:64px}
+  .marquee-track span{font-size:16px}
+  .map{min-height:340px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-panel .tire,.marquee-track{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- Иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <mask id="wjaw" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect width="100" height="100" fill="#fff"/>
+      <g transform="rotate(-45 50 50)"><rect x="44.5" y="-4" width="11" height="19" rx="2" fill="#000"/><rect x="44.5" y="85" width="11" height="19" rx="2" fill="#000"/></g>
+    </mask>
+  </defs>
+  <symbol id="logo-icon" viewBox="0 0 100 100">
+    <g mask="url(#wjaw)" style="fill:var(--tool-a)"><g transform="rotate(-45 50 50)"><circle cx="50" cy="13" r="13"/><circle cx="50" cy="87" r="13"/><rect x="44" y="18" width="12" height="64" rx="4"/></g></g>
+    <g transform="rotate(45 50 50)" style="fill:var(--tool-b);stroke:var(--logo-bg);stroke-width:5;paint-order:stroke">
+      <rect x="47" y="8" width="6" height="56" rx="2"/><path d="M46 12 50 3 54 12Z"/><rect x="41" y="58" width="18" height="38" rx="7"/>
+    </g>
+    <g transform="rotate(45 50 50)" style="fill:var(--logo-bg)"><rect x="45.2" y="66" width="2" height="24" rx="1"/><rect x="49" y="66" width="2" height="24" rx="1"/><rect x="52.8" y="66" width="2" height="24" rx="1"/></g>
+  </symbol>
+  <symbol id="i-tire" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></symbol>
+  <symbol id="i-align" viewBox="0 0 24 24"><rect x="2" y="5" width="4" height="14" rx="1.5"/><rect x="18" y="5" width="4" height="14" rx="1.5"/><path d="M6 12h12M9.5 9 6.5 12l3 3M14.5 9l3 3-3 3"/></symbol>
+  <symbol id="i-oil" viewBox="0 0 24 24"><path d="M12 3c3.2 4.2 6 7.3 6 11a6 6 0 0 1-12 0c0-3.7 2.8-6.8 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M15.5 3.7a9 9 0 0 1 4.8 4.8"/><circle cx="12" cy="6.5" r=".6"/><circle cx="17.5" cy="12" r=".6"/><circle cx="12" cy="17.5" r=".6"/><circle cx="6.5" cy="12" r=".6"/></symbol>
+  <symbol id="i-engine" viewBox="0 0 24 24"><path d="M2 11v5M2 13.5h2.5M4.5 9H8V7h7v2h2l2 2.5h3v5h-3L17 19H8.5l-4-3.5z"/><path d="M10 7V5h3v2"/></symbol>
+  <symbol id="i-clutch" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></symbol>
+  <symbol id="i-susp" viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M12 3v2M12 19v2M8 5.5l8 1.6-8 1.6 8 1.6-8 1.6 8 1.6-8 1.6 8 1.6"/></symbol>
+  <symbol id="i-cool" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M3.2 10.5 9.6 11.5M20.8 10.5l-6.4 1M12 14.5V21"/></symbol>
+  <symbol id="i-heat" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-7 0-4.6-4.4-6.6-5-12-3 1.7-4.6 5-4.6 7.4C8.3 9.5 7.6 8.4 7.5 7 5.8 8.7 5 11.6 5 15c0 4.2 3 7 7 7z"/><path d="M12 22c-1.7 0-3-1.3-3-3 0-2 2-3 3-5 1 2 3 3 3 5 0 1.7-1.3 3-3 3z"/></symbol>
+  <symbol id="i-tow" viewBox="0 0 24 24"><path d="M2 15h9l3.5-3.5H17"/><circle cx="19.5" cy="11.5" r="2.5"/><path d="M6 15v4M4 19h4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9M7.5 5.2l9 4.6"/></symbol>
+  <symbol id="i-diag" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m21 21-5.2-5.2M7.5 10.5l2 2 4-4"/></symbol>
+  <symbol id="i-balance" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/><rect x="10.5" y="1.5" width="3" height="3" rx=".5"/></symbol>
+  <symbol id="i-patch" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m15 9 4-4M17 3l4 4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4 4V21.5H6z"/><path d="M14 2.5v4h4M9 11h6M9 14.5h6M9 18h3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.5 5.2 2 2 0 0 1 4.5 3h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.4 10.9a16 16 0 0 0 4.7 4.7l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12.2A7 7 0 0 0 5 9.8C5 15.8 12 22 12 22z"/><circle cx="12" cy="9.8" r="2.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M3.5 20.5 5 16A8.5 8.5 0 1 1 8.3 19z"/><path d="M8.5 9.5c.3 2.6 2.4 4.7 5 5l1.2-1.2 2 1-.6 1.6c-4.4.3-8.4-3.7-8.1-8.1l1.6-.6 1 2z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3 2.5 10.5l7 2.5 2.5 7z"/><path d="m21.5 3-12 10"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="hazard"></div>
+  <div class="wrap">
+    <a href="#top" aria-label="Need-Авто — на главную">
+      <svg class="logo" viewBox="0 0 540 100" role="img" aria-label="Need-Авто">
+        <text x="0" y="78" textLength="200" lengthAdjust="spacingAndGlyphs">NEED</text>
+        <use href="#logo-icon" x="220" y="0" width="100" height="100"/>
+        <text x="340" y="78" textLength="200" lengthAdjust="spacingAndGlyphs">АВТО</text>
+      </svg>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#tires">Шиномонтаж</a>
+      <a href="#how">Этапы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="header-phone" href="tel:+79999601917">+7 999 960-19-17</a>
+    <a class="btn btn-y" href="#booking">Записаться</a>
+    <button class="burger" type="button" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div style="padding-bottom:clamp(48px,7vw,96px)">
+        <span class="tag"><i></i>Открыты с 9:00 · Иваново, 16-я линия</span>
+        <h1>Автосервис и <mark>шиномонтаж</mark> для тех, кто ценит своё время</h1>
+        <p class="lead">Ремонтируем ходовую, двигатель и тормоза, делаем ТО, переобуваем и настраиваем развал. Перед ремонтом честно говорим, что сломалось и сколько это стоит.</p>
+        <div class="hero-cta">
+          <a class="btn btn-y" href="#booking">Записаться</a>
+          <a class="btn btn-line" href="tel:+79999601917"><svg class="ico"><use href="#i-phone"/></svg>+7 999 960-19-17</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-hidden="true">
+        <!-- PHOTO: можно заменить на фото бокса / подъёмника -->
+        <svg class="tire" viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="rim" cx="45%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#111"/></radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="196" fill="#111"/>
+          <circle cx="200" cy="200" r="184" fill="none" stroke="#262626" stroke-width="22" stroke-dasharray="14 10"/>
+          <circle cx="200" cy="200" r="168" fill="#0b0b0b"/>
+          <circle cx="200" cy="200" r="130" fill="#FFC400"/>
+          <circle cx="200" cy="200" r="118" fill="#151515"/>
+          <g fill="url(#rim)" stroke="#FFC400" stroke-width="3">
+            <path id="spoke" d="M188 88h24l10 78h-44z"/>
+            <use href="#spoke" transform="rotate(60 200 200)"/>
+            <use href="#spoke" transform="rotate(120 200 200)"/>
+            <use href="#spoke" transform="rotate(180 200 200)"/>
+            <use href="#spoke" transform="rotate(240 200 200)"/>
+            <use href="#spoke" transform="rotate(300 200 200)"/>
+          </g>
+          <circle cx="200" cy="200" r="42" fill="#FFC400"/>
+          <circle cx="200" cy="200" r="16" fill="#111"/>
+        </svg>
+        <div class="sticker"><b>4.6★</b><span>65 оценок на Яндекс Картах</span></div>
+        <div class="hero-chip">12+ видов работ</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Шиномонтаж</span><span>Развал-схождение</span><span>ТО и замена масла</span><span>Тормоза</span><span>ГРМ и ГБЦ</span><span>Сцепление</span><span>Подвеска</span><span>Охлаждение</span><span>ГУР</span><span>Отопители</span><span>Фаркопы</span><span>Запчасти</span>
+      <span>Шиномонтаж</span><span>Развал-схождение</span><span>ТО и замена масла</span><span>Тормоза</span><span>ГРМ и ГБЦ</span><span>Сцепление</span><span>Подвеска</span><span>Охлаждение</span><span>ГУР</span><span>Отопители</span><span>Фаркопы</span><span>Запчасти</span>
+    </div>
+  </div>
+
+  <!-- ADVANTAGES -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="kicker">// Почему Need-Авто</span><h2>Работаем по-честному</h2></div>
+        <p>Нас рекомендуют за честную диагностику и аккуратный ремонт. Так написано в отзывах на Яндекс Картах.</p>
+      </div>
+      <div class="adv">
+        <div class="adv-item cut reveal"><div class="adv-ico cut"><svg class="ico"><use href="#i-diag"/></svg></div><h3>Честная диагностика</h3><p>Показываем неисправность и объясняем, что срочно, а что может подождать.</p></div>
+        <div class="adv-item cut reveal"><div class="adv-ico cut"><svg class="ico"><use href="#i-doc"/></svg></div><h3>Цена до ремонта</h3><p>Стоимость согласуем заранее. Без вашего «да» к работам не приступаем.</p></div>
+        <div class="adv-item cut reveal"><div class="adv-ico cut"><svg class="ico"><use href="#i-bolt"/></svg></div><h3>Быстро</h3><p>Типовые работы делаем в день обращения.</p></div>
+        <div class="adv-item cut reveal"><div class="adv-ico cut"><svg class="ico"><use href="#i-box"/></svg></div><h3>Запчасти под заказ</h3><p>Подберём оригинал или аналог под ваш бюджет.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="kicker">// Услуги</span><h2>Что мы делаем</h2></div>
+        <p>Нажмите на услугу, и она подставится в форму записи. Стоимость назовём после осмотра.</p>
+      </div>
+      <!-- TODO: при желании добавить цены «от … ₽» в каждую карточку -->
+      <div class="services">
+        <button class="svc cut reveal" type="button" data-service="Шиномонтаж"><span class="n">01</span><h3>Шиномонтаж</h3><p>Переобувка, балансировка, ремонт проколов.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-tire"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Развал-схождение"><span class="n">02</span><h3>Развал-схождение</h3><p>Машину не тянет в сторону, резина не стирается.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-align"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="ТО и замена масла"><span class="n">03</span><h3>ТО и масло</h3><p>Масло, фильтры и жидкости по регламенту.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-oil"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Тормозная система"><span class="n">04</span><h3>Тормоза</h3><p>Колодки, диски, суппорты, тормозная жидкость.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-brake"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Ремонт двигателя"><span class="n">05</span><h3>Двигатель</h3><p>Ремень ГРМ, ремонт ГБЦ, устранение течей.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-engine"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Сцепление"><span class="n">06</span><h3>Сцепление</h3><p>Диагностика и замена комплекта.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-clutch"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Ремонт подвески"><span class="n">07</span><h3>Подвеска</h3><p>Амортизаторы, шаровые, рычаги, сайлентблоки.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-susp"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Система охлаждения"><span class="n">08</span><h3>Охлаждение</h3><p>Радиаторы, помпы, термостаты, антифриз.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-cool"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Ремонт ГУР"><span class="n">09</span><h3>Рулевое и ГУР</h3><p>Гидроусилитель руля и рулевые тяги.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-wheel"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Автономный отопитель"><span class="n">10</span><h3>Отопители</h3><p>Ремонт автономных отопителей.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-heat"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Установка фаркопа"><span class="n">11</span><h3>Фаркопы</h3><p>Установка и подключение электрики.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-tow"/></svg></button>
+        <button class="svc cut reveal" type="button" data-service="Запчасти под заказ"><span class="n">12</span><h3>Запчасти</h3><p>Подбор по VIN и доставка в сервис.</p><span class="more">Записаться →</span><svg class="ico"><use href="#i-box"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIRES -->
+  <div class="hazard"></div>
+  <section class="tires" id="tires">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">// Шиномонтаж</span>
+        <h2 class="h2">Сезон? Переобуем без&nbsp;очереди</h2>
+        <p class="lead">Запишитесь на конкретное время, и машину возьмут в работу сразу по приезде. Легковые автомобили и кроссоверы.</p>
+        <a class="btn btn-ink" href="#booking" data-service="Шиномонтаж">Записаться на шиномонтаж</a>
+      </div>
+      <div class="tire-grid reveal">
+        <div class="tire-card cut"><svg class="ico"><use href="#i-tire"/></svg><b>Переобувка</b><span>Снятие, монтаж, установка</span></div>
+        <div class="tire-card cut"><svg class="ico"><use href="#i-balance"/></svg><b>Балансировка</b><span>Руль не бьёт на скорости</span></div>
+        <div class="tire-card cut"><svg class="ico"><use href="#i-patch"/></svg><b>Ремонт проколов</b><span>Жгуты, латки, грибки</span></div>
+        <div class="tire-card cut"><svg class="ico"><use href="#i-align"/></svg><b>Развал-схождение</b><span>Точная регулировка</span></div>
+        <!-- TODO: уточнить, есть ли сезонное хранение шин -->
+      </div>
+    </div>
+  </section>
+  <div class="hazard"></div>
+
+  <!-- STEPS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><span class="kicker">// Этапы</span><h2>Как проходит ремонт</h2></div></div>
+      <div class="steps">
+        <div class="step cut reveal"><h3>Заявка</h3><p>Звонок, WhatsApp или форма на сайте.</p></div>
+        <div class="step cut reveal"><h3>Диагностика</h3><p>Осматриваем машину и показываем, что нашли.</p></div>
+        <div class="step cut reveal"><h3>Смета</h3><p>Называем цену и сроки и ждём вашего согласия.</p></div>
+        <div class="step cut reveal"><h3>Выдача</h3><p>Отдаём машину и даём рекомендации на будущее.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><span class="kicker">// Отзывы</span><h2>Что говорят клиенты</h2></div></div>
+      <div class="reviews-wrap">
+        <a class="score cut reveal" href="https://yandex.ru/maps/org/need_avto/78441120028/reviews/" target="_blank" rel="noopener">
+          <div><b>4.6</b><div class="stars">★★★★★</div></div>
+          <p>65 оценок и 37 отзывов на Яндекс Картах. Читать все →</p>
+        </a>
+        <!-- TODO: подставить имена авторов и полные тексты отзывов с Яндекс Карт -->
+        <div class="reviews">
+          <figure class="review cut reveal"><q>Диагностику провели честно. Сказали, что действительно нужно менять, а что ещё походит.</q><span class="stars">★★★★★</span><cite>Клиент с Яндекс Карт</cite></figure>
+          <figure class="review cut reveal"><q>Ремонт провели качественно. Ребята компетентные и дружелюбные, быстро и недорого.</q><span class="stars">★★★★★</span><cite>Клиент с Яндекс Карт</cite></figure>
+          <figure class="review cut reveal"><q>Меняли колодки и два рычага на Geely Atlas. Пунктуально, качеством доволен.</q><span class="stars">★★★★★</span><cite>Клиент с Яндекс Карт</cite></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="booking" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">// Запись</span>
+        <h2 class="h2">Запишитесь на&nbsp;ремонт</h2>
+        <p class="lead">Оставьте заявку, и мы перезвоним, чтобы подобрать время. Или свяжитесь с нами напрямую.</p>
+        <div class="contacts-quick">
+          <a href="tel:+79999601917"><svg class="ico"><use href="#i-phone"/></svg>+7 999 960-19-17<small>звонок</small></a>
+          <a href="https://wa.me/79999601917" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>WhatsApp<small>ответим в чате</small></a>
+          <a href="https://t.me/+79999601917" target="_blank" rel="noopener"><svg class="ico"><use href="#i-send"/></svg>Telegram<small>ответим в чате</small></a>
+        </div>
+      </div>
+      <div class="form-frame cut reveal">
+        <form class="form cut" id="form" novalidate>
+          <h3>Заявка</h3>
+          <div class="row2">
+            <div class="field"><label for="f-name">Имя</label><input id="f-name" autocomplete="name" placeholder="Как к вам обращаться"></div>
+            <div class="field"><label for="f-phone">Телефон *</label><input id="f-phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="f-car">Автомобиль</label><input id="f-car" placeholder="Марка, модель, год"></div>
+            <div class="field"><label for="f-service">Услуга</label>
+              <select id="f-service">
+                <option>Диагностика</option><option>Шиномонтаж</option><option>Развал-схождение</option><option>ТО и замена масла</option><option>Тормозная система</option><option>Ремонт двигателя</option><option>Сцепление</option><option>Ремонт подвески</option><option>Система охлаждения</option><option>Ремонт ГУР</option><option>Автономный отопитель</option><option>Установка фаркопа</option><option>Запчасти под заказ</option><option>Другое</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-msg">Комментарий</label><textarea id="f-msg" rows="3" placeholder="Что беспокоит в машине?"></textarea></div>
+          <button class="btn btn-y" type="submit"><svg class="ico"><use href="#i-chat"/></svg>Отправить в WhatsApp</button>
+          <small>Заявка откроется в WhatsApp, останется только нажать «Отправить».</small>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <div class="info cut reveal">
+        <div><span class="kicker">// Контакты</span><h2 class="h2" style="font-size:clamp(28px,3.4vw,40px)">Ждём в&nbsp;боксе</h2></div>
+        <!-- TODO: уточнить номер дома -->
+        <div class="info-row"><svg class="ico"><use href="#i-pin"/></svg><div><small>Адрес</small><b>г. Иваново, 16-я линия</b><br><a href="https://yandex.ru/maps/?rtext=~56.993435%2C40.931718&rtt=auto" target="_blank" rel="noopener" style="color:var(--yellow);font-size:14px;font-weight:600">Построить маршрут →</a></div></div>
+        <div class="info-row"><svg class="ico"><use href="#i-phone"/></svg><div><small>Телефон</small><b><a href="tel:+79999601917">+7 999 960-19-17</a></b></div></div>
+        <!-- TODO: проверить график работы -->
+        <div class="info-row"><svg class="ico"><use href="#i-clock"/></svg><div><small>Режим работы</small><b>Ежедневно, 9:00 – 19:00</b></div></div>
+        <div class="info-row"><svg class="ico"><use href="#i-chat"/></svg><div><small>Мессенджеры</small><b><a href="https://wa.me/79999601917" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/+79999601917" target="_blank" rel="noopener">Telegram</a></b></div></div>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=40.931718%2C56.993435&z=16&oid=78441120028&ol=biz" title="Need-Авто на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="hazard"></div>
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 540 100" role="img" aria-label="Need-Авто">
+      <text x="0" y="78" textLength="200" lengthAdjust="spacingAndGlyphs">NEED</text>
+      <use href="#logo-icon" x="220" y="0" width="100" height="100"/>
+      <text x="340" y="78" textLength="200" lengthAdjust="spacingAndGlyphs">АВТО</text>
+    </svg>
+    <span>© <span id="year">2026</span> Need-Авто. Автосервис и шиномонтаж в Иваново.</span>
+    <a href="tel:+79999601917">+7 999 960-19-17</a>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+79999601917" aria-label="Позвонить"><svg class="ico"><use href="#i-phone"/></svg></a>
+
+<script>
+(() => {
+  const WA = '79999601917';
+
+  // Мобильное меню
+  const burger = document.querySelector('.burger');
+  const setMenu = open => { document.body.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open); };
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  // Появление блоков при прокрутке
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Клик по услуге — подставить её в форму
+  const select = document.getElementById('f-service');
+  document.querySelectorAll('[data-service]').forEach(el => el.addEventListener('click', () => {
+    select.value = el.dataset.service;
+    if (el.tagName === 'BUTTON') document.getElementById('booking').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }));
+
+  // Маска телефона
+  const phone = document.getElementById('f-phone');
+  phone.addEventListener('input', () => {
+    let d = phone.value.replace(/\D/g, '');
+    if (d.startsWith('8')) d = '7' + d.slice(1);
+    if (!d.startsWith('7')) d = '7' + d;
+    d = d.slice(0, 11);
+    const p = [d.slice(1, 4), d.slice(4, 7), d.slice(7, 9), d.slice(9, 11)];
+    phone.value = '+7' + (p[0] ? ' (' + p[0] : '') + (p[1] ? ') ' + p[1] : '') + (p[2] ? '-' + p[2] : '') + (p[3] ? '-' + p[3] : '');
+  });
+
+  // Отправка заявки в WhatsApp
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = id => document.getElementById('f-' + id);
+    const field = phone.closest('.field');
+    if (phone.value.replace(/\D/g, '').length < 11) { field.classList.add('err'); phone.focus(); return; }
+    field.classList.remove('err');
+    const lines = ['Здравствуйте! Хочу записаться в Need-Авто.'];
+    if (f('name').value.trim()) lines.push('Имя: ' + f('name').value.trim());
+    lines.push('Телефон: ' + phone.value);
+    if (f('car').value.trim()) lines.push('Авто: ' + f('car').value.trim());
+    lines.push('Услуга: ' + f('service').value);
+    if (f('msg').value.trim()) lines.push('Комментарий: ' + f('msg').value.trim());
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
